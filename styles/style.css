@@ -1,0 +1,17 @@
+:root {
+    --color-principal: rgb(0, 140, 255);
+    --font-principal: "Comfortaa", serif;
+
+}
+
+
+.nav-barcolor {
+    background-color: #00a2ff; /* Azul */
+}
+body {
+    font-family: var(--font-principal);
+}
+.img {
+    width: 16rem;
+    
+}
