@@ -14,27 +14,41 @@ html {
     font-size: 62.5%;
     box-sizing: border-box; /* Hack para Box Model **/
 
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px; /* Ajusta esto según la altura del navbar */
+ 
+
+}
+section {
+    padding-top: 100px;
+    margin-top: -100px;
+    
 }
 /** Scroll Snap**/
-/**
 
-    scroll-snap-type: y mandatory;
+
+/* scroll-snap-type {
+    x mandatory;
+    y mandatory;
+}
 .servicios,
 .navegacion-principal,
 .formulario {
     scroll-snap-align: center;
     scroll-snap-stop: always;
-}
-**/
+} */
+
 
 
 *, *:before, *:after {
     box-sizing: inherit;
 }
 body {
+    padding-top: 116px; /* Ajusta según la altura de tu navbar */
     font-size: 16px; /* 1rem = 10px */
     font-family: 'Krub', sans-serif;
-    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100% );
+    color: var(--blanco);
+
 }
 .contenedor {
     max-width: 120rem;
@@ -85,6 +99,11 @@ h1,h2,h3 {
 }
 
 
+.color-blanco {
+    color: var(--blanco);
+}
+
+
 /* Titulos */
 .titulo span {
     font-size: 2rem;
@@ -93,19 +112,42 @@ h1,h2,h3 {
 
 
 .nav-barcolor {
-    background-color: var(--secundario)
+    background-color: #212121
+
+}
+.nav {
+    position: fixed;
+    width: 100%;
+    z-index: 1000; /* Asegura que quede por encima de otros elementos */
+    top: 0;
+    left: 0;
+    color: var(--blanco);
+    background-color: #212121;
+    transition: top 0.3s; /* Para hacer que el navbar se desplace suavemente */
+}
+.hidden {
+    top: -120px; /* Cambia este valor dependiendo de la altura de tu navbar */
 }
 body {
     font-family: var(--font-principal);
-    background-color: aliceblue;
+    background-color: #212121
 }
 .img {
-    width: 16rem;
-    
+    width: 17rem;
+    border-radius: 15%;
+    border: 2px solid transparent; /* Borde transparente para no interferir con el efecto */
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, .9), 0 0 20px 5px rgba(0, 255, 255, 10); /* Efecto brillante */
+    transition: box-shadow 0.3s ease; /* Para hacer que el brillo cambie suavemente */
+}
+img:hover {
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8), 0 0 30px 10px #05F2F2; /* Aumentar el brillo al pasar el ratón */
 }
 
-
 /** Servicios **/
+.servicios-titulo {
+    margin-top: 36rem;
+    margin-bottom: 4rem;
+}
 @media (min-width: 768px) {
     .servicios {
         display: grid;
@@ -130,8 +172,6 @@ body {
 .servicio .iconos {
     height: 15rem;
     width: 15rem;
-    background-color: var(--primario);
-    border-radius: 50%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -149,17 +189,65 @@ body {
     padding: 2rem;
     border-radius: 1rem;
 }
-h2 {
-    text-align: center;
-    margin-bottom: 5rem;
 
-}
 
 /* NavBar */
+
 .fuente {
     font-size: 2.2rem;
+    color: var(--blanco)
+
+
+}
+.fuente-decoracion {
+    text-decoration: none;
 }
 
+.a-nombre-yo {
+    color: #05F2F2;
+}
+.a-nombre {
+    font-weight:bolder;
+    color: var(--blanco);
+}
+
+/* Perfil */
+.Im-Container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    height: 150px;
+    margin-left: 4rem;
+    margin-top: 30rem;
+    margin-bottom: 13rem;
+}
+.Im-Container-presentacion {
+    text-align: left;
+    margin-left: 13%;
+}
+.m {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+.name {
+    font-size: 4rem;
+}
+.texto-presentacion {
+    margin-top: 1rem;
+    max-width: 50rem;
+    font-size: small;
+    word-wrap: break-word;
+}
+.container-profile-div {
+    margin-left: 14%;
+}
+.im {
+    color: #05F2F2;
+}
+.boton-cv {
+    background-color: var(--secundario);
+}
 
 /* Sección Proyectos */
 #proyectos {

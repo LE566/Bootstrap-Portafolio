@@ -12,7 +12,7 @@ fetch("https://api.github.com/users/LE566/repos") // Cambia 'LE566' por tu usuar
     repoCard.innerHTML = `
         <h3>${repo.name}</h3>
         <p>${repo.description || "Sin descripción disponible"}</p>
-        <a href="${repo.html_url}" target="_blank">🔗 Ver en GitHub</a>
+        <a href="${repo.html_url}" target="_blank">Ver en GitHub</a>
     `;
 
     reposContainer.appendChild(repoCard);
@@ -20,4 +20,14 @@ fetch("https://api.github.com/users/LE566/repos") // Cambia 'LE566' por tu usuar
 })
 .catch(error => console.error("Error al obtener los repos:", error));
 });
+
+function openModal(title, imgSrc, description) {
+    document.getElementById("modalTitle").innerText = title;
+    document.getElementById("modalImage").src = imgSrc;
+    document.getElementById("modalDescription").innerText = description;
+    
+    let modal = new bootstrap.Modal(document.getElementById('serviceModal'));
+    modal.show();
+}
+
 
