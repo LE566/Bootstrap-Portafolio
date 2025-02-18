@@ -132,15 +132,25 @@ body {
     font-family: var(--font-principal);
     background-color: #212121
 }
+
 .img {
-    width: 17rem;
+    width: 10rem;
     border-radius: 15%;
-    border: 2px solid transparent; /* Borde transparente para no interferir con el efecto */
-    box-shadow: 0 0 1px 1px rgba(255, 255, 255, .9), 0 0 20px 5px rgba(0, 255, 255, 10); /* Efecto brillante */
-    transition: box-shadow 0.3s ease; /* Para hacer que el brillo cambie suavemente */
+    border: 1px solid transparent;
+    box-shadow: 0 0 1px 1px rgba(255, 255, 255, .9), 0 0 20px 5px rgba(0, 255, 255, 10);
+    transition: box-shadow 0.3s ease; 
+}
+@media (min-width: 480px) {
+    .img {
+        width: 17rem;
+        border-radius: 15%;
+        border: 2px solid transparent;
+        box-shadow: 0 0 1px 1px rgba(255, 255, 255, .9), 0 0 20px 5px rgba(0, 255, 255, 10);
+        transition: box-shadow 0.3s ease; 
+    }
 }
 img:hover {
-    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8), 0 0 30px 10px #05F2F2; /* Aumentar el brillo al pasar el ratón */
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8), 0 0 30px 10px #05F2F2; 
 }
 
 /** Servicios **/
@@ -223,7 +233,7 @@ img:hover {
 }
 .Im-Container-presentacion {
     text-align: left;
-    margin-left: 13%;
+    margin-left: 0%;
 }
 .m {
     text-align: left;
@@ -240,7 +250,73 @@ img:hover {
     word-wrap: break-word;
 }
 .container-profile-div {
-    margin-left: 14%;
+    margin-left: 0%;
+}
+.navbar-toggler-icon {
+    color: var(--blanco);
+    background-color: var(--blanco);
+}
+.ocultar-container {
+    display: none;
+}
+.mq-nav {
+    font-size: 1.5rem;
+}
+
+@media (min-width: 480px) {
+    .Im-Container-presentacion {
+        margin-left: 13%;
+    }
+    .container-profile-div {
+        margin-left: 20%;
+    }
+    .mq-nav {
+        font-size: 2rem;
+    }
+    .container-profile {
+        margin-right: 10rem;
+    }
+
+}
+@media (min-width: 739px) {
+    .mq-nombre-2 {
+        margin-right: 32rem;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .mq-nombre-2 {
+        margin-right: 32rem;
+    }
+
+
+}
+@media (min-width: 850px) {
+    .mq-nombre-2 {
+        margin-right: 32rem;
+    }
+
+
+}
+@media (min-width: 1024px) {
+    .Im-Container {
+        margin-top: 30rem;
+        margin-bottom: 20rem;
+    }
+    .container-fluid {
+        margin: 0 0rem 0 0;
+        justify-content: space-between !important;
+    }
+    .mq-nombre-2 {
+        margin-right: 0rem;
+    }
+
+}
+@media (min-width: 1780px) {
+    .servicios-titulo {
+        margin-top: 50rem;
+    }
 }
 .im {
     color: #05F2F2;
@@ -250,6 +326,7 @@ img:hover {
 }
 
 /* Sección Proyectos */
+
 #proyectos {
     padding: 4rem 2rem;
     border-radius: 1rem;
